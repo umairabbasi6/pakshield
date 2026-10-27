@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pakshield"
+version = "0.1.0"
+description = "Detect, mask and restore Pakistani CNIC numbers in English/Urdu text (best-effort)"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = []
+keywords = ["pakistan", "cnic", "pii", "redaction", "urdu", "privacy", "llm"]
+authors = [{ name = "Umair Abbasi" }]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/umairabbasi6/pakshield"
+Repository = "https://github.com/umairabbasi6/pakshield"
+Issues = "https://github.com/umairabbasi6/pakshield/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pakshield"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
